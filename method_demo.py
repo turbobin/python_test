@@ -11,7 +11,7 @@ describe_pet("harry",animal_type="cat")	#将覆盖默认值
 def get_name(first_name,last_name=""):
 	"""返回一个整洁的名字"""
 	full_name = first_name+" "+last_name
-	return full_name.title()
+	return full_name.title()	#函数也可以返回多个值，但其实返回的值是一个tuple(元组)，用逗号分开可分别赋给对应的变量
 	
 name = get_name("jimi","hendrix")
 print ("\n"+name)

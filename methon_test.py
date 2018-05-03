@@ -23,13 +23,19 @@ print("printed_eles[]="+str(printed_eles))
 # ~ 传递任意数量实参
 def make_pizza(size,*toppings):
 	"""说明要制作的披萨"""
+	
+	if not isinstance(size, (str,int)):	#对传入的参数做检查
+		raise TypeError("bad oprand type,not int or str")
+		
 	print ("\nMaking a "+str(size)+
 			"-inch pizza with the following toppings:")
 	for topping in toppings:
 		print("- "+topping)
 		
-make_pizza(16,"pepperoni")
+make_pizza('16.3',"pepperoni")
 make_pizza(13,"mushroom","green peppers","extra cheese")
+pizza_typ = ["mushroom","green peppers","extra cheese"]
+make_pizza(14,*pizza_typ)	# *pizza_typ表示把这个list所有元素作为可变参数传递进去
 
 # ~ 使用任意数量的关键字参数
 def build_profile(first,last,**user_info):
