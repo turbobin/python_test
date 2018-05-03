@@ -1,2 +1,2 @@
 # python_test
-python»ù´¡Á·Ï°demo
+pythonåŸºç¡€ç»ƒä¹ demo
