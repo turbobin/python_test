@@ -25,7 +25,7 @@ print(list(map(str,[1,2,3,4,5])))
 #reduce()函数 ——>把结果不断和下一个元素做累积计算
 from functools import reduce
 def sum_2(x,y):
-    return x + y
+    return x * y
 
 r = reduce(sum_2,[1,2,3,4,5])
 print('sum:',r)
@@ -38,3 +38,10 @@ def _not_title(s):
 
 re = list(filter(_not_title,["java","C++","Python","php"]))
 print(re)
+
+# sorted()函数
+arr = [21,44,-52,12,-24]
+print(sorted(arr,key=abs))  #key函数来实现自定义的排序，临时排序，不会改变原来arr的顺序
+
+# 倒序排列
+print(sorted(arr,key=abs,reverse=True))
