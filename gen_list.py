@@ -20,14 +20,11 @@ print(L2)
 print("\n生成器:")    
 g = (x * x for x in range(1,11))
 print(g)    # 返回一个generator对象 ：<generator object <genexpr> at 0x0061F8A0>
-<<<<<<< HEAD
+
 # 可以用迭代方法获取元素
-=======
-# 可是用迭代方法获取元素
->>>>>>> 6b91e0f2fd75d0f8a5e200c260c4800179258a34
 for i in g:
     print(i)
-    
+
 # 
 def fib(max_):  #加_用于区分python关键字
     n, a, b = 0, 0, 1
@@ -39,19 +36,14 @@ def fib(max_):  #加_用于区分python关键字
     return 'done'
 
 f = fib(6)  #返回一个generator对象：<generator object fib at 0x0055F8A0> 
-<<<<<<< HEAD
+
 # for i in f: #同样可使用迭代来获取元素
 #     print(i)
-=======
-for i in f: #同样可使用迭代来获取元素
-    print(i)
->>>>>>> 6b91e0f2fd75d0f8a5e200c260c4800179258a34
 
 # 如果要拿到return语句的返回值,需要捕获StopIteration异常
 while True:
     try:
         x = next(f)
-<<<<<<< HEAD
         print ("f:",x)
     except StopIteration as e:
         print(e.value)
@@ -64,9 +56,3 @@ it = iter([1,2,3,4])    #iter()函数 将对象生成一个迭代器
 可以使用isinstance()判断一个对象是否是Iterator对象，注意区分Iterable
 for循环本质上就是不断调用next()函数实现的
 """
-=======
-        print('f',x)
-    except StopIteration as e:
-        print(e.value)
-        break
->>>>>>> 6b91e0f2fd75d0f8a5e200c260c4800179258a34
