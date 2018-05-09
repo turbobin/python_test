@@ -10,7 +10,7 @@ from enum import Enum, unique
 
 @unique     #可保证枚举key没有重复值
 class Weekday(Enum):
-    Sun = 0
+    Sun = 0 #Sun的value被设定为0
     Mon = 1
     Tue = 2
     Wed = 3
@@ -21,6 +21,7 @@ class Weekday(Enum):
 
 day1 = Weekday.Mon
 
+print(dir(Weekday))
 print('day1 =', day1)
 print('Weekday.Tue =', Weekday.Tue)
 print('Weekday[\'Tue\'] =', Weekday['Tue'])
@@ -30,9 +31,9 @@ print('day1 == Weekday.Tue ?', day1 == Weekday.Tue)
 print('day1 == Weekday(1) ?', day1 == Weekday(1))
 
 for name, member in Weekday.__members__.items():
-    print(name, '=>', member)
+    print(name, '=>', member,'=>',member.value)
 
 Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 
 for name, member in Month.__members__.items():
-    print(name, '=>', member, ',', member.value)
+    print(name, '=>', member, ',', member.value)    #Values属性是自动赋值给成员的int常量，默认从1开始计数
