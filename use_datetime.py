@@ -50,4 +50,11 @@ print(dt)
 utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
 print(utc_dt)
 
-#astimezone
+#astimezone()将转换时区为北京时间：
+Beijing_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+print(Beijing_dt)
+# 转换时间为东京时间
+Tokoy_dt = utc_dt.astimezone(timezone(timedelta(hours=9)))
+Tokoy_dt2 = Beijing_dt.astimezone(timezone(timedelta(hours=9)))
+print('Tokoy_dt :',Tokoy_dt)
+print('Tokoy_dt2:',Tokoy_dt2)   #两个时间一样，说明任何带时区的datetime都可以转
