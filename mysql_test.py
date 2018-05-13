@@ -8,6 +8,7 @@ conn = pymysql.connect(host="localhost",user="root",password="root",db="mysql",p
 cursor = conn.cursor()
 cursor.execute("SELECT VERSION()")
 row = cursor.fetchone()
+print(row)
 print("MySQL server version:", row[0])
 cursor.close()
 conn.close()
